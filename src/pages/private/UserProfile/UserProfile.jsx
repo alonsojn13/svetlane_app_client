@@ -1,8 +1,21 @@
-import React from 'react'
 import profileOne from '../../../assets/imgs/profileOne.jpg'
 import styles from './UserProfile.module.css'
+import getProfile from '../../../services/hooks/getProfile'
 
 function UserProfile() {
+
+
+  async function as() {
+
+    const username = await getProfile();
+    console.log(username);
+
+  }
+
+  as();
+
+  
+
   return (
     <div className={styles.userProfileSec}>
 

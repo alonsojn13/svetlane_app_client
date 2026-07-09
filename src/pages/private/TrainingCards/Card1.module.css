@@ -98,22 +98,22 @@
 }
 
 .header {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin:4px;
-    margin-bottom: 10px;
-    background-color: rgba(42, 42, 42, 0.5);
+    margin: 4px;
+    margin-bottom: 0;
 
     h1 {
-        padding: 18px 18px 0 18px;
+        padding: 14px;
         font-weight: 600;
-        color: var(--white-5);
+        color: var(--white-8);
+        background-color: var(--white-2);
+
     }
 
     h1 span {
         color: white;
+
     }
 }
 
@@ -125,10 +125,8 @@
     overflow-wrap: anywhere;
     margin-bottom: 4px;
     gap: 5px;
-
-    background-color: var(--black-5);
-    margin: 6px;
-    padding: 10px;
+    padding: 10px 18px;
+    background-color: var(--white-1);
 
     /* Will cut the string when it necessary to avoid loss the complete word*/
 
@@ -140,13 +138,8 @@
     }
 
     div p {
-        color: var(--white-6);
         font-weight: 200;
         line-height: 1.6;
-    }
-    
-    div p span {
-        color: var(--white-8);
     }
 
     img {
@@ -171,17 +164,17 @@
 .question {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .question h5 {
     display: flex;
     gap: 5px;
     align-self: start;
-    margin: 0 6px;
-    margin-bottom: 12px;
+    margin: 10px 6px;
+    margin-bottom: 8px;
     font-weight: 300;
     color: var(--white-6);
-    background-color: rgba(42, 42, 42, 0.5);
     padding: 4px 10px;
 
     img {
@@ -199,8 +192,7 @@
     border-top: 1px solid var(--white-3);
     margin: 0 6px;
     gap: 4px;
-
-
+    background-color: var(--white-1);
     padding: 14px 10px;
 
     img {
@@ -211,7 +203,6 @@
 
     b {
         font-weight: 600;
-        border-bottom: 1px solid var(--white-4);
     }
 }
 
@@ -225,12 +216,13 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background-color: rgba(42, 42, 42, 0.3);
+    background-color: var(--white-1);
     border: 1px solid var(--white-1);
-
+    margin:6px;
+    margin-top: 0;
+    
     p {
         font-size: 15px;
-        color: var(--white-6);
         flex-grow: 1;
         padding-left: 10px;
         font-weight: 200;

@@ -14,7 +14,7 @@ function RealLifeSituations() {
 
     const situationRow = {
       language_id: languageId,
-      situation:situation,
+      situation: situation,
       level: level,
       table_name: "situations"
     };
@@ -34,13 +34,24 @@ function RealLifeSituations() {
         <p key={s.id}>{s.situation} </p>
       ))}
 
-      <input type="text" value={languageId}
-        onChange={e => setLanguageId(e.target.value)} />
+      <label htmlFor="">
+         <p>Idioma:</p>
+        <input type="text" value={languageId}
+          onChange={e => setLanguageId(e.target.value)} />
+      </label>
+
+      <label htmlFor="">
+        <p>Nombre:</p>
       <input type="text" value={situation}
         onChange={e => setSituation(e.target.value)} />
+        </label>
+
+      <label htmlFor="">
+      <p>Nivel: </p>
       <input type="text" value={level}
         onChange={e => setLevel(e.target.value)} />
-
+        </label> 
+        <br />
       <button onClick={addSituation}>Agregame</button>
     </>
   )

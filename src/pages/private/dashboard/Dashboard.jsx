@@ -208,12 +208,10 @@ function Dashboard() {
       <section className={dashboard.infoContainer}>
         <div className={dashboard.info}>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam laborum sequi perspiciatis nemo obcaecati minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet. <span>Magnam laborum sequi perspiciatis nemo obcaecati minima</span> .
           </p>
         </div>
       </section>
-
-
 
       <footer className={dashboard.footer}>
         <p>Seraphic</p>

@@ -19,6 +19,7 @@ import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealL
 import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
 import CEFRAlignment from './pages/private/metrics/CEFRAlignment/CEFRAlignment';
 import Login from './pages/public/auth/Login/Login';
+import CardsInsert from './pages/private/TrainingCards/CardsInsert';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
             <Route path="/register" element={<Register />} /> {/* public */}
             <Route path="/login" element={<Login />} /> {/* public */}
             <Route path="/training" element={<TrainingCards />} />
-            
+
           </Route>
 
           <Route element={<MainLayout />}>
@@ -50,6 +51,10 @@ function App() {
 
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/science-based" element={<ScienceBased />} />
+
+            <Route path="/cards-insert" element={<CardsInsert />} />
+
+
 
           </Route>
 

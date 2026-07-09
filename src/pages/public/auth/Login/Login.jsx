@@ -7,15 +7,16 @@ function Login() {
   const [password, setPassword] = useState("");
 
   async function tryLogin() {
-    
+
     const intent = {
       email: email,
-      passwordHash:password
+      passwordHash: password
     };
 
-    const response = await loginUser(intent);
+    const token = await loginUser(intent);
 
-   console.log(response);
+    localStorage.setItem("token", token);
+
   }
 
   return (

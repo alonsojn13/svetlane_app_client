@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import { API_CORE_URL } from "../api/apiCoreUrl";
+
+
 export default function findAll(table_name){
 
     const [arr,setArr] = useState([]);
     
-    const API_URL = `http://192.168.1.58:8082/api/findAll`; 
+    const API_URL = `http://192.168.1.66:8082/api/findAll`; 
 
     useEffect(() => {
         axios.post(API_URL + `?table=${table_name}`)

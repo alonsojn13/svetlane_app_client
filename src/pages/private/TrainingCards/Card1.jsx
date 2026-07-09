@@ -28,6 +28,7 @@ function Card1({
     answerImage = 1,
     typeAnswerDesc = 1,
     audio,
+    questionsDesc = 1,
     nextStep,
     backStep }) {
 
@@ -37,9 +38,13 @@ function Card1({
     let answerDesc = typeAnswerDesc == 1 ? answerDescText : answerDescAudio;
     let answerImagesDef = answerImage == 1 ? camera : microphoneWhite;
 
+    let texto1 = "¿Como escribirias ";
+    let texto2 = "¿Como pronunciarias ";
 
-    /* parrafo reproducir audio */
+    let questionDescriptionFinal = questionsDesc == 1 ? texto1 : texto2;
 
+
+    
     const audioArticle = useRef(null);
 
 
@@ -75,6 +80,8 @@ function Card1({
                         <header className={card.header}>
                             <h1 onClick={playAudio}> {paragraph} </h1>
 
+                            {word1ExplLearning && (
+                                
                             <div className={card.explanation}>
 
                                 {word1ExplLearning && (
@@ -94,6 +101,8 @@ function Card1({
                                 )}
                             </div>
 
+                            )}
+
                             <div className={card.headerImage}>
                                 <img src={photo1} alt="" />
                             </div>
@@ -101,17 +110,17 @@ function Card1({
 
 
                         <ul className={card.question}>
-                            <h5><img src={clockWhite} alt="" />Done in less than 5 min</h5>
+                            <h5><img src={clockWhite} alt="" />Done in less than 70 seg</h5>
                             {firstQuest && (
                                 <li>
-                                    <p> ¿Como escribirias <b>{firstQuest}</b> ?</p>
+                                    <p> {questionDescriptionFinal} <b>{firstQuest}</b> ?</p>
                                     <img src={arrowDownLinkedWhite} alt="" />
                                 </li>
                             )}
-
+                            
                             {secondQuest && (
                                 <li>
-                                    <p>¿Como dirias <b>{secondQuest}</b> ?</p>
+                                    <p> {questionDescriptionFinal} <b>{secondQuest}</b> ?</p>
                                     <img src={arrowDownLinkedWhite} alt="" />
                                 </li>
                             )}

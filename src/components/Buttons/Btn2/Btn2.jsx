@@ -10,9 +10,11 @@ function Btn2({ text1, img }) {
           <p>
             {text1}
           </p>
-          <section>
+          {img && (
+            <section>
             <img src={img} alt="" />
           </section>
+          )}
         </div>
       </button>
     </>

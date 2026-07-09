@@ -1,0 +1,1 @@
+export const API_CORE_URL = "http://192.168.1.66:8082";

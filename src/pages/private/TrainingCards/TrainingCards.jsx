@@ -4,8 +4,13 @@ import styles from './TrainingCards.module.css'
 import Btn1 from '../../../components/Buttons/Btn1/Btn1';
 import Card1 from './Card1';
 import microphoneWhite from '../../../assets/icons/microphoneWhite.svg';
-import you from '../../../assets/cards_audio/you.ogg';
-import howare from '../../../assets/cards_audio/howare.ogg';
+
+import what from '../../../assets/cards_audio/what.ogg';
+import is from '../../../assets/cards_audio/is.ogg';
+import your from '../../../assets/cards_audio/your.ogg';
+import name from '../../../assets/cards_audio/name.ogg';
+import whatIsYourName from '../../../assets/cards_audio/whatIsYourName.ogg';
+
 
 
 function TrainingCards() {
@@ -28,27 +33,29 @@ function TrainingCards() {
         <Card1
           paragraph={
             <>
-              Where
+              What
             </>
           }
-          audio = {you}
-          word1ExplLearning="Where"
-          word1ExplKnown="cuando"
-          firstQuest="cuando"
+          audio={what}
+          word1ExplLearning="What"
+          word1ExplKnown="que"
+          firstQuest="que"
           nextStep={updateStep}
         />
       )}
+
 
       {step === 2 && (
         <Card1
           paragraph={
             <>
-              Hello, how are <span>you</span> tonight, where is your friend ?
+              Is
             </>
           }
-          audio = {howare}
-          parag1Expl="como estas?"
-          firstQuest="como estas, Alonso"
+          audio={is}
+          word1ExplLearning="Is"
+          word1ExplKnown="es"
+          firstQuest="es"
           nextStep={updateStep}
           backStep={backStep}
         />
@@ -58,10 +65,13 @@ function TrainingCards() {
         <Card1
           paragraph={
             <>
-              <span>Perro</span>
+              Your
             </>
           }
-          firstQuest="Perro"
+          audio={your}
+          word1ExplLearning="Your"
+          word1ExplKnown="tuyo"
+          firstQuest="tuyo"
           nextStep={updateStep}
           backStep={backStep}
         />
@@ -71,10 +81,13 @@ function TrainingCards() {
         <Card1
           paragraph={
             <>
-              <span>Saludar</span>
+              Name
             </>
           }
-          firstQuest="como estas"
+          audio={name}
+          word1ExplLearning="Name"
+          word1ExplKnown="nombre"
+          firstQuest="nombre"
           nextStep={updateStep}
           backStep={backStep}
         />
@@ -85,94 +98,107 @@ function TrainingCards() {
         <Card1
           paragraph={
             <>
-              <span>You, esc</span>
+              What is your name
             </>
           }
-          firstQuest="tu"
-          answerImage={microphoneWhite}
-          typeAnswerDesc={"2"}
+          audio={whatIsYourName}
+          word1ExplLearning="Is"
+          word1ExplKnown="Cual es tu nombre?"
+          firstQuest="cual es tu nombre?"
           nextStep={updateStep}
           backStep={backStep}
         />
       )}
 
-          {step === 6 && (
+
+      {step === 6 && (
         <Card1
           paragraph={
             <>
-              <span>How are you, esc</span>
+              What
             </>
           }
-          firstQuest="como estas"
-          answerImage={"2"}
-          typeAnswerDesc={"2"}
           nextStep={updateStep}
           backStep={backStep}
+          audio={what}
+          firstQuest="what"
+          answerImage={2}
+          typeAnswerDesc={2}
+          questionsDesc={2}
         />
       )}
 
 
-       {step === 7 && (
+      {step === 7 && (
         <Card1
           paragraph={
             <>
-              <span>esc wo</span>
+              Is
             </>
           }
-          thirdQuest="¿Puedes pronunciar lo que has escuchado?"
-          answerImage={"2"}
-          typeAnswerDesc={"2"}
           nextStep={updateStep}
           backStep={backStep}
+          audio={is}
+          firstQuest="is"
+          answerImage={2}
+          typeAnswerDesc={2}
+          questionsDesc={2}
         />
       )}
 
-       {step === 8 && (
+
+      {step === 8 && (
         <Card1
           paragraph={
             <>
-              <span>esc fr</span>
+              Your
             </>
           }
-          thirdQuest="¿Puedes pronunciar lo que has escuchado?"
-          answerImage={"2"}
-          typeAnswerDesc={"2"}
           nextStep={updateStep}
           backStep={backStep}
+          audio={your}
+          firstQuest="your"
+          answerImage={2}
+          typeAnswerDesc={2}
+          questionsDesc={2}
         />
       )}
 
 
-       {step === 9 && (
+      {step === 9 && (
         <Card1
           paragraph={
             <>
-              <span>¿Where do you live?</span>
+              Name
             </>
           }
-          thirdQuest="¿Puedes responder a lo que has escuchado?"
-          answerImage={"2"}
-          typeAnswerDesc={"2"}
           nextStep={updateStep}
           backStep={backStep}
+          audio={name}
+          firstQuest="name"
+          answerImage={2}
+          typeAnswerDesc={2}
+          questionsDesc={2}
         />
       )}
 
-         {step === 10 && (
+
+        {step === 10 && (
         <Card1
           paragraph={
             <>
-              <span>Esc quest</span>
+              What is your name?
             </>
           }
-          thirdQuest="¿Puedes responder a lo que has escuchado?"
-          answerImage={"2"}
-          typeAnswerDesc={"2"}
           nextStep={updateStep}
           backStep={backStep}
+          audio={whatIsYourName}
+          firstQuest="what is your name?"
+          answerImage={2}
+          typeAnswerDesc={2}
+          questionsDesc={2}
         />
       )}
-
 
 
 

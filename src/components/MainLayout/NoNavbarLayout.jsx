@@ -5,6 +5,7 @@ function NoNavbarLayout() {
   return (
     <main>
         <Outlet/>
+        
     </main>
   )
 }

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styles from './WordsLearned.module.css';
-import findAll from '../../../../services/hooks/findAll';
 import { addRow } from '../../../../services/hooks/addRow';
+import { useFindAllWords } from '../../../../services/hooks/words/useFindAllWords';
 
 
 function WordsLearned() {
 
-  const words = findAll("words");
+  const wordsFounded = useFindAllWords();
 
   const [languageId, setLanguageId] = useState(0);
   const [word, setWord] = useState("");
@@ -15,7 +15,7 @@ function WordsLearned() {
  function handleSubmit(){
 
     /* At the end of the obj we need to specify on what table we want to put this object */
-    const word = {
+    const row = {
       language_id: languageId,
       word:word,
       level:level,
@@ -39,13 +39,23 @@ function WordsLearned() {
       <section>
           Formulario:
 
+          <label htmlFor="">
+            <p>Language:</p>
             <input value={languageId}
             onChange={e => setLanguageId(e.target.value)} />
+            </label>
+
+            <label htmlFor="">
+              <p>Word</p>
             <input value={word}
             onChange={e => setWord(e.target.value)} />
+            </label>  
+
+            <label htmlFor="">
+            <p>Level:</p>
             <input value={level}
             onChange={e => setLevel(e.target.value)} />
-
+            </label>
 
           <button onClick={handleSubmit}>Presioname</button>
 
@@ -56,7 +66,7 @@ function WordsLearned() {
           <summary>A1- Words</summary>
 
           <div>
-            {words.map(w => ( 
+            {wordsFounded.map(w => ( 
               <p key={w.id}>{w.language_id} {w.word}</p>
             ) )}
           </div>
