@@ -12,14 +12,15 @@ import NoNavbarLayout from './components/MainLayout/NoNavbarLayout';
 
 import SocialChat from "./pages/private/SocialChat/SocialChat";
 import WordsLearned from "./pages/private/metrics/WordsLearned/WordsLearned";
-import TrainingCards from "./pages/private/TrainingCards/TrainingCards";
 import Config from './pages/private/Config/Config';
 import ScienceBased from './pages/public/info/ScienceBased/ScienceBased';
 import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealLifeSituations';
 import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
 import CEFRAlignment from './pages/private/metrics/CEFRAlignment/CEFRAlignment';
 import Login from './pages/public/auth/Login/Login';
-import CardsInsert from './pages/private/TrainingCards/CardsInsert';
+import TrainingCards from './pages/private/Cards/Learning/TrainingCards';
+import MonthlyReview from './pages/private/Cards/MonthlyReview/MonthlyReview';
+import ReviewCard from './pages/private/Cards/Review/ReviewCard';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          
           <Route element={<NoNavbarLayout />}>
             <Route path="/" element={<Home />} /> {/* public */}
 
@@ -41,7 +43,6 @@ function App() {
 
           <Route element={<MainLayout />}>
 
-
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/cefr-aligned" element={<CEFRAlignment />} />
             <Route path="/real-life-situations" element={<RealLifeSituations />} />
@@ -52,9 +53,8 @@ function App() {
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/science-based" element={<ScienceBased />} />
 
-            <Route path="/cards-insert" element={<CardsInsert />} />
-
-
+            <Route path="/monthlyreview" element={<MonthlyReview />} />
+            <Route path="/review" element={<ReviewCard />} />
 
           </Route>
 

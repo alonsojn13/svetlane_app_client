@@ -58,6 +58,7 @@
     justify-content: end;
     font-size: var(--text-sm);
     border-left: 1px solid var(--white-3);
+    border-right: 1px solid var(--white-3);
     width: 60px;
 
 
@@ -87,14 +88,13 @@
 .navigationMenu {
     display: flex;
     align-items: center;
-    border-left: 1px solid var(--white-2);
+    height: 100%;
     padding: 0 6px;
     justify-self: end;
 
     img {
         width: 30px;
         height: 35px;
-        opacity: 0.7;
     }
 }
 
@@ -104,15 +104,12 @@
 
 
 
-.list {
-    display: none;
-}
 
-.open {
+.list {
     position: absolute;
     z-index: 15;
     right: 0;
-    top: 3.8rem;
+    top: 3.5rem;
     display: flex;
     flex-direction: column;
     background-color: var(--black-6);

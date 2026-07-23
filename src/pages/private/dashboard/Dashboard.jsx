@@ -214,7 +214,7 @@ function Dashboard() {
       </section>
 
       <footer className={dashboard.footer}>
-        <p>Seraphic</p>
+        <p>Svetlane</p>
         <p>© 2026 Brilliant Technologies </p>
       </footer>
 
