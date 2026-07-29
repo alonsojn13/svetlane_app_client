@@ -10,6 +10,7 @@ import hamburgerMenu from '../../assets/icons/hamburgerMenu.svg'
 import frFlag from '../../assets/icons/frFlag.svg'
 import spFlag from '../../assets/icons/spFlag.svg'
 import ukFlag from '../../assets/icons/ukFlag.svg'
+import home from '../../assets/icons/homeWhite.svg'
 
 function HamburgerMenu() {
   return (
@@ -20,8 +21,11 @@ function HamburgerMenu() {
         </summary>
 
         <ul className={styles.list}>
-          <li> <Link to="/dashboard">Home</Link></li>
-          <li> <Link to="/training">Training</Link></li>
+          <li> <Link to="/training">Continue</Link></li>
+          <li> <Link to="/real-world">Real-World</Link></li>
+          <li> <Link to="/free-review">Review</Link></li>
+          <li> <Link to="/social-chat">Social</Link></li>
+          <br />
           <details>
             <summary><img src={arrowDown} alt="" /> Progress</summary>
             <div>
@@ -31,9 +35,6 @@ function HamburgerMenu() {
 
             </div>
           </details>
-          <li> <Link to="/social-chat">Social</Link></li>
-          <br />
-
           <details>
             <summary><img src={arrowDown} alt="" />Interesting</summary>
             <div>
@@ -43,24 +44,21 @@ function HamburgerMenu() {
             </div>
           </details>
 
-          <details className={styles.appLanguageSelect}>
-            <summary> <img src={arrowDown} alt="" />App Language</summary>
-            <div >
-              <li> <Link to="/real-life-situations"> <img src={spFlag} alt="" /> Spanish</Link></li>
-              <li> <Link to="/real-life-situations"> <img src={ukFlag} alt="" /> English</Link></li>
-              <li> <Link to="/real-life-situations"> <img src={frFlag} alt="" /> Francais</Link></li>
+          <li> <Link to="/social-chat">Languages</Link></li>
 
-            </div>
-          </details>
+          {/* 
           <li> <Link to="/training">Plans</Link></li>
           <li> <Link to="/fluency">Fluency</Link></li>
           <li> <Link to="/monthlyreview">MonthlyReview</Link></li>
           <li> <Link to="/review">Review</Link></li>
-
+*/}
 
           <section className={styles.dropdownIconsBelow}>
+            <Link to="/configuration"> <img src={spFlag} alt="" /></Link>
             <Link to="/configuration"> <img src={logout} alt="" /></Link>
             <Link to="/configuration"> <img src={config} alt="" /></Link>
+            <Link to="/dashboard"> <img src={home} alt="" /></Link>
+
           </section>
         </ul>
 

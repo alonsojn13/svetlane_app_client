@@ -111,24 +111,23 @@
     border-right: 1px solid var(--white-2);
 
     header {
-        border-top: 2px solid var(--white-2);
+        border-bottom: 2px solid var(--white-2);
         margin-bottom: 20px;
-        background-color: var(--white-1);
         padding: 10px;
-        display:flex;
-        align-items: start;
-        gap:8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
- 
-    header div p{
-        color:var(--white-4);
+
+    header div p {
         font-size: 14px;
     }
 
     img {
         margin-top: 4px;
-        width: 28px;
-        border:1px solid var(--white-5);
+        width: 34px;
+        height: 28px;
+        border: 1px solid var(--white-5);
     }
 
     article {
@@ -156,24 +155,22 @@
         flex-direction: column;
     }
 
-    article div:nth-of-type(2) p{
-        color:var(--white-5 );
+    article div:nth-of-type(2) p {
+        color: var(--white-5);
     }
 
 
 }
 
-.info{
-        width:90vw;
-    padding:20px;
+.info {
+    width: 90vw;
+    padding: 20px;
     border-left: 1px solid var(--white-2);
     border-right: 1px solid var(--white-2);
-    
-
 }
 
-.info span{
-    color:var(--white-4);
+.info span {
+    color: var(--white-4);
 }
 
 .footer {

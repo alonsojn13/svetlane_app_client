@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 import styles from './GrammarLearned.module.css';
-import findAll from '../../../../services/hooks/findAll';
-import { addRow } from '../../../../services/hooks/addRow';
 
 
 
 function GrammarLearned() {
 
-  const grammarRules = findAll("grammar");
 
   const [languageId, setLanguageId ] = useState(0);
   const [languageRuleId, setLanguageRuleId ] = useState(0);

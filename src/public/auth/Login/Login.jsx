@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import loginUser from '../../../../services/hooks/loginUser';
 
 function Login() {
 

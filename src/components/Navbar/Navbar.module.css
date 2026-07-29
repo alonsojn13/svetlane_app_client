@@ -121,7 +121,7 @@
     list-style: none;
     font-size: var(--text-lg);
     font-weight: 200;
-    height: 100vh;
+    min-height: 100%;
     width: 100vw;
 
 

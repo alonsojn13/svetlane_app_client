@@ -1,40 +1,45 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 import './styles/layout/layout.css';
 
-import Dashboard from "./pages/private/dashboard/Dashboard";
-import Methodology from "./pages/public/info/Methodology/Methodology";
 
-import UserProfile from "./pages/private/UserProfile/UserProfile";
-import Register from "./pages/public/auth/Register/Register";
-import Home from "./pages/public/home/Home"
+import Dashboard from './private/dashboard/Dashboard';
+
+import Methodology from './public/info/Methodology/Methodology';
+
+import Register from "./public/auth/Register/Register";
+
+import Home from "./public/home/Home"
 import MainLayout from './components/MainLayout/MainLayout';
 import NoNavbarLayout from './components/MainLayout/NoNavbarLayout';
 
-import SocialChat from "./pages/private/SocialChat/SocialChat";
-import WordsLearned from "./pages/private/metrics/WordsLearned/WordsLearned";
-import Config from './pages/private/Config/Config';
-import ScienceBased from './pages/public/info/ScienceBased/ScienceBased';
-import RealLifeSituations from './pages/private/metrics/RealLifeSituations/RealLifeSituations';
-import GrammarLearned from './pages/private/metrics/GrammarLearned/GrammarLearned';
-import CEFRAlignment from './pages/private/metrics/CEFRAlignment/CEFRAlignment';
-import Login from './pages/public/auth/Login/Login';
-import TrainingCards from './pages/private/Cards/Learning/TrainingCards';
-import MonthlyReview from './pages/private/Cards/MonthlyReview/MonthlyReview';
-import ReviewCard from './pages/private/Cards/Review/ReviewCard';
+import SocialChat from "./private/features/socialChat/SocialChat";
+import WordsLearned from "./private/features/progress/activeWords/WordsLearned";
+import Config from './private/config/Config';
+import ScienceBased from './public/info/ScienceBased/ScienceBased';
+import RealLifeSituations from './private/features/progress/realLifeSituations/RealLifeSituations';
+import GrammarLearned from './private/features/progress/grammarLearned/GrammarLearned';
+import CEFRAlignment from './private/features/progress/cefrAlignment/CEFRAlignment';
+import Login from './public/auth/Login/Login';
+import TrainingCards from './private/features/learningCards/TrainingCards';
+import UserProfile from './private/features/userProfile/UserProfile';
 
 
 function App() {
+
+  
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          
+
           <Route element={<NoNavbarLayout />}>
             <Route path="/" element={<Home />} /> {/* public */}
 
             <Route path="/user-profile" element={<UserProfile />} /> {/* private */}
-            <Route path="/social-chat" element={<SocialChat />} /> {/* private */}
+            <Route path="/social" element={<SocialChat />} /> {/* private */}
             <Route path="/register" element={<Register />} /> {/* public */}
             <Route path="/login" element={<Login />} /> {/* public */}
             <Route path="/training" element={<TrainingCards />} />
@@ -52,9 +57,6 @@ function App() {
 
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/science-based" element={<ScienceBased />} />
-
-            <Route path="/monthlyreview" element={<MonthlyReview />} />
-            <Route path="/review" element={<ReviewCard />} />
 
           </Route>
 

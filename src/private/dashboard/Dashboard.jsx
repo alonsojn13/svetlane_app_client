@@ -3,21 +3,20 @@ import { Link } from 'react-router-dom';
 import cards from './Card.module.css';
 import dashboard from './Dashboard.module.css';
 
-import Btn2 from '../../../components/Buttons/Btn2/Btn2';
-import Btn1 from '../../../components/Buttons/Btn1/Btn1';
+import Btn1 from '../../components/Buttons/Btn1/Btn1';
 
-import franceBg from '../../../assets/imgs/franceBg.png';
-import profileOne from '../../../assets/imgs/profileOne.jpg';
-import profileTwo from '../../../assets/imgs/profileTwo.webp';
+import franceBg from '../../assets/imgs/franceBg.png';
+import profileOne from '../../assets/imgs/profileOne.jpg';
+import profileTwo from '../../assets/imgs/profileTwo.webp';
 
-import darkMap from '../../../assets/imgs/darkMap.png';
+import darkMap from '../../assets/imgs/darkMap.png';
 
 
-import frFlag from '../../../assets/icons/frFlag.svg';
-import spFlag from '../../../assets/icons/spFlag.svg';
-import ukFlag from '../../../assets/icons/ukFlag.svg';
-import louvre from '../../../assets/icons/louvre.png';
-import snowy from '../../../assets/icons/snowy.svg';
+import frFlag from '../../assets/icons/frFlag.svg';
+import spFlag from '../../assets/icons/spFlag.svg';
+import ukFlag from '../../assets/icons/ukFlag.svg';
+import louvre from '../../assets/icons/louvre.png';
+import snowy from '../../assets/icons/snowy.svg';
 
 
 
@@ -103,39 +102,20 @@ function Dashboard() {
             </div>
           </article>
 
-          <article>
-            <div>
-              <p>55%</p>
-            </div>
-            <div>
-              <h3 className='degraded-text-white'>Progress </h3>
-              <p>For complete level.</p>
-            </div>
-          </article>
 
-
-          <article>
-            <div>
-              <p>+10</p>
-            </div>
-            <div>
-              <h3 className='degraded-text-white'>Active words </h3>
-              <p>You are confident using.</p>
-            </div>
-          </article>
 
         </div>
       </section>
 
+{/* 
       <section className={cards.languagesContainer}>
         <header className={`header-basic`}>
           <h2>Available Languages</h2>
           <span>for learn on your language</span>
         </header>
-
         <div className={cards.cardsCarrousel}>
 
-          <section> {/* French */}
+          <section>
 
             <div className={cards.languageCard}>
               <img className={cards.countryBackground} src={franceBg} alt="" />
@@ -204,6 +184,8 @@ function Dashboard() {
         </div>
 
       </section>
+
+      */}
 
       <section className={dashboard.infoContainer}>
         <div className={dashboard.info}>

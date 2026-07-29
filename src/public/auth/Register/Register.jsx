@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import styles from './Register.module.css'
-import { Link } from 'react-router-dom';
-import registerUser from '../../../../services/hooks/registerUser';
-import ukFlag from '../../../../assets/icons/ukFlag.svg';
-import Btn1 from '../../../../components/Buttons/Btn1/Btn1';
-import { useFindAvailableLanguages } from '../../../../services/hooks/misc/useFindAvailableLanguages';
+import registerUser from '../../../services/hooks/registerUser';
+import ukFlag from '../../../assets/icons/ukFlag.svg';
+import Btn1 from '../../../components/Buttons/Btn1/Btn1';
+import { useFindAvailableLanguages } from '../../../services/hooks/misc/useFindAvailableLanguages';
 
-import world from '../../../../assets/icons/world.svg'
-import person from '../../../../assets/icons/person.svg'
-import key from '../../../../assets/icons/key.svg'
+import world from '../../../assets/icons/world.svg'
+import person from '../../../assets/icons/person.svg'
+import key from '../../../assets/icons/key.svg'
 
 function Register() {
 
