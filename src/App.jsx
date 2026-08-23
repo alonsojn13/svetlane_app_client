@@ -1,29 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
-import './styles/layout/layout.css';
+import './layout.css';
 
 
-import Dashboard from './private/dashboard/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 
-import Methodology from './public/info/Methodology/Methodology';
+import Register from "@/pages/essential/Register/Register";
 
-import Register from "./public/auth/Register/Register";
-
-import Home from "./public/home/Home"
 import MainLayout from './components/MainLayout/MainLayout';
 import NoNavbarLayout from './components/MainLayout/NoNavbarLayout';
 
-import SocialChat from "./private/features/socialChat/SocialChat";
-import WordsLearned from "./private/features/progress/activeWords/WordsLearned";
-import Config from './private/config/Config';
-import ScienceBased from './public/info/ScienceBased/ScienceBased';
-import RealLifeSituations from './private/features/progress/realLifeSituations/RealLifeSituations';
-import GrammarLearned from './private/features/progress/grammarLearned/GrammarLearned';
-import CEFRAlignment from './private/features/progress/cefrAlignment/CEFRAlignment';
-import Login from './public/auth/Login/Login';
-import TrainingCards from './private/features/learningCards/TrainingCards';
-import UserProfile from './private/features/userProfile/UserProfile';
+import SocialChat from "./features/socialChat/SocialChat";
+import RealLifeSituations from './pages/RealLifeSituations/RealLifeSituations';
+import GrammarLearned from './pages/GrammarLearned/GrammarLearned';
+import TrainingCards from './features/learningCards/TrainingCards';
+
+import Config from '@/pages/essential/Config/Config';
+import Login from '@/pages/essential/Login/Login';
+import UserProfile from './pages/UserProfile/UserProfile';
+import AvailableLanguages from './pages/AvailableLanguages/AvailableLanguages';
+import ActiveWords from '@/pages/ActiveWords/ActiveWords';
 
 
 function App() {
@@ -36,7 +33,7 @@ function App() {
         <Routes>
 
           <Route element={<NoNavbarLayout />}>
-            <Route path="/" element={<Home />} /> {/* public */}
+            <Route path="/" element={<Register />} /> {/* public */}
 
             <Route path="/user-profile" element={<UserProfile />} /> {/* private */}
             <Route path="/social" element={<SocialChat />} /> {/* private */}
@@ -49,14 +46,12 @@ function App() {
           <Route element={<MainLayout />}>
 
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/cefr-aligned" element={<CEFRAlignment />} />
             <Route path="/real-life-situations" element={<RealLifeSituations />} />
             <Route path="/grammar-learned" element={<GrammarLearned />} />
-            <Route path="/words-learned" element={<WordsLearned />} />
+            <Route path="/active-words" element={<ActiveWords />} />
             <Route path="/config" element={<Config />} />
 
-            <Route path="/methodology" element={<Methodology />} />
-            <Route path="/science-based" element={<ScienceBased />} />
+            <Route path="/available-languages" element={<AvailableLanguages />} />
 
           </Route>
 

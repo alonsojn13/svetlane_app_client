@@ -22,7 +22,6 @@ function HamburgerMenu() {
 
         <ul className={styles.list}>
           <li> <Link to="/training">Continue</Link></li>
-          <li> <Link to="/real-world">Real-World</Link></li>
           <li> <Link to="/free-review">Review</Link></li>
           <li> <Link to="/social-chat">Social</Link></li>
           <br />
@@ -30,35 +29,20 @@ function HamburgerMenu() {
             <summary><img src={arrowDown} alt="" /> Progress</summary>
             <div>
               <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
-              <li> <Link to="/words-learned">Vocabulary</Link></li>
+              <li> <Link to="/active-words">Active Words</Link></li>
               <li> <Link to="/grammar-learned">Grammar</Link></li>
 
             </div>
           </details>
-          <details>
-            <summary><img src={arrowDown} alt="" />Interesting</summary>
-            <div>
-              <li> <Link to="/methodology">Methodology</Link></li>
-              <li> <Link to="/cefr-aligned">CEFR-Aligned</Link></li>
-              <li> <Link to="/science-based">Science-based</Link></li>
-            </div>
-          </details>
-
-          <li> <Link to="/social-chat">Languages</Link></li>
-
-          {/* 
           <li> <Link to="/training">Plans</Link></li>
-          <li> <Link to="/fluency">Fluency</Link></li>
-          <li> <Link to="/monthlyreview">MonthlyReview</Link></li>
-          <li> <Link to="/review">Review</Link></li>
-*/}
 
           <section className={styles.dropdownIconsBelow}>
-            <Link to="/configuration"> <img src={spFlag} alt="" /></Link>
             <Link to="/configuration"> <img src={logout} alt="" /></Link>
-            <Link to="/configuration"> <img src={config} alt="" /></Link>
-            <Link to="/dashboard"> <img src={home} alt="" /></Link>
-
+            <div>
+              <Link to="/available-languages"> <img src={spFlag} alt="" /></Link>
+              <Link to="/configuration"> <img src={config} alt="" /></Link>
+              <Link to="/dashboard"> <img src={home} alt="" /></Link>
+            </div>
           </section>
         </ul>
 

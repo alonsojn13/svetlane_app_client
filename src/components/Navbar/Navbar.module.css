@@ -5,9 +5,9 @@
     background-color: var(--black-1);
     z-index: 10;
     position: relative;
-    width:100vw;
-    border-top:1px solid var(--white-2);
-    border-bottom:1px solid var(--white-2);
+    width: 100vw;
+    border-top: 1px solid var(--white-2);
+    border-bottom: 1px solid var(--white-2);
 }
 
 .navbarMenu {
@@ -17,7 +17,7 @@
     border-right: 1px solid var(--white-2);
     border-bottom: 1px solid var(--white-2);
     height: 55px;
-    width:90vw;
+    width: 90vw;
     box-shadow: 0 30px 40px rgb(37, 37, 37);
 }
 
@@ -115,7 +115,7 @@
     background-color: var(--black-6);
     backdrop-filter: blur(15px);
     gap: 40px;
-    
+
     padding: 30px 40px;
     text-align: end;
     list-style: none;
@@ -167,13 +167,20 @@ summary img {
     }
 }
 
-.dropdownIconsBelow{
+.dropdownIconsBelow {
     padding-top: 40px;
-    display:flex;
-    justify-content: end;
+    display: flex;
+    justify-content: space-between;
     gap:20px;
-    a img{
-        width:26px;
-        opacity:0.6;
+
+    a img {
+        width: 26px;
+        opacity: 0.6;
+    }
+
+    div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
     }
 }
