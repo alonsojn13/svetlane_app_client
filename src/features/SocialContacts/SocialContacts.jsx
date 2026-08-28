@@ -10,24 +10,41 @@ import styles from './SocialContacts.module.css';
 import { Link } from 'react-router-dom';
 import { useContacts } from '@/services/hooks/social/useContacts';
 import { useChatContact } from '@/services/hooks/social/useChatContact';
+import { useSendMessage } from '@/services/hooks/social/useSendMessage';
 
 function SocialContacts() {
 
     const [step, setStep] = useState(1);
-
-
+    const [messages, setMessages] = useState([]);
 
     const contacts = useContacts();
     console.log(contacts);
 
     const { chatContact, data } = useChatContact();
 
-    async function openChat(idContact) {
-
-        const res = await chatContact(idContact);
-        console.log(res);
-
+    // Load a chat with all the messages from the two users.
+    async function openChat(chatId, idContact) {
+        const res = await chatContact(chatId, idContact);
+        setStep(2);
+        setMessages(res.data);
     }
+
+    const [message, setMessage] = useState("");
+
+
+    const { sendMessage } = useSendMessage();
+
+
+    function sendMessageBtn(chatId) {
+
+        const msg = {
+            message: message,
+            chatId: chatId
+        }
+
+        sendMessage(msg);
+    }
+
 
 
     return (
@@ -48,31 +65,44 @@ function SocialContacts() {
 
                 </header>
 
-                {step === 1 && (
 
-                    <div className={styles.contactsContainer}>
 
-                        {contacts.map((c) => (
-                            <article onClick={() => openChat(c.idContact)} className={styles.contactCard}>
-                                <header className={styles.userProfileInfo}>
-                                    <h3><img className={styles.userMotherTongueFlag} src={frFlag} alt="" /> {c.name} {c.lastname} <img className={styles.greenDot} src={greenDot} alt="" /> </h3>
-                                    <h5>Practicing <img className={styles.userLanguageLearningFlag} src={spFlag} alt="" /></h5>
-                                </header>
-                                <footer>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, ad reiciendis sequi nam beatae quidem? </p>
-                                    <span>...</span>
-                                </footer>
-                            </article>
+                {contacts.map((c) => (
+                    <>
+                        {step === 1 && (
 
-                        ))}
-                    </div>
-                )}
+                            <div className={styles.contactsContainer}>
 
-                {step === 2 && (
-                    <div>
-                        <h1>Kovaliov Kuznetsova</h1>
-                    </div>
-                )}
+
+                                <article onClick={() => openChat(c.chatId, c.idContact)} className={styles.contactCard}>
+                                    <header className={styles.userProfileInfo}>
+                                        <h3><img className={styles.userMotherTongueFlag} src={frFlag} alt="" /> {c.name} {c.lastname} <img className={styles.greenDot} src={greenDot} alt="" /> </h3>
+                                        <h5>Practicing <img className={styles.userLanguageLearningFlag} src={spFlag} alt="" /></h5>
+                                    </header>
+                                    <footer>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, ad reiciendis sequi nam beatae quidem? </p>
+                                        <span>...</span>
+                                    </footer>
+                                </article>
+
+
+                            </div>
+                        )}
+
+                        {step === 2 && (
+                            <div>
+                                {messages.map((m) => (
+                                    <div>
+                                        <p>{m.paragraph} </p>
+                                    </div>
+                                ))}
+                                <hr />
+                                <textarea name="" id="" onChange={(e) => setMessage(e.target.value)} value={message}></textarea>
+                                <button onClick={() => sendMessageBtn(c.chatId)}>Enviar mensaje</button>
+                            </div>
+                        )}
+                    </>
+                ))}
 
 
             </section>

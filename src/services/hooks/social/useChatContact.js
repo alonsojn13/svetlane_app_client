@@ -10,10 +10,11 @@ export function useChatContact() {
 
     const [data,setData] = useState([]);
 
-    const chatContact = async (idContact) => {
+    const chatContact = async (chatId,idContact) => {
 
         const obj = {
-            idContact: idContact
+            chatId: chatId,
+            idContact:idContact
         }
 
         const res = await axios.post(url,obj, {
@@ -22,7 +23,7 @@ export function useChatContact() {
             }
         });
         setData(res.data);
-        return res.data;
+        return res;
 
     }
 
