@@ -5,7 +5,7 @@ import minusWhite from '@/assets/icons/minusWhite.svg';
 import interrogativeWhite from '@/assets/icons/interrogativeWhite.svg';
 
 import { useEffect, useRef, useState } from 'react';
-import { useVerifyAudio } from '@/services/hooks/verify/useVerifyAudio';
+import { useVerifyAudio } from '@/services/hooks/auth/useVerifyAudio';
 
 function ReviewCard({
   videoBackground,

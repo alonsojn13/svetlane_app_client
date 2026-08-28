@@ -17,6 +17,7 @@ import spFlag from '../../assets/icons/spFlag.svg';
 import ukFlag from '../../assets/icons/ukFlag.svg';
 import louvre from '../../assets/icons/louvre.png';
 import snowy from '../../assets/icons/snowy.svg';
+import useUserInfo from '@/services/hooks/user/useUserInfo';
 
 
 
@@ -52,6 +53,10 @@ function Dashboard() {
     dayMessage = "Good Night";
   }
 
+
+    const userInfo = useUserInfo();
+    console.log(userInfo);
+
   return (
     <>
 
@@ -60,7 +65,7 @@ function Dashboard() {
         <header className={dashboard.greeting}>
           {dayMessage}, <br />
           <div>
-            <span>Kuznetosva</span>.
+            <span>{userInfo.name}</span>.
             <p className={dashboard.date}>
               <span>{hourFormatted}:{minutesFormatted}</span>
               <span><img src={snowy} alt="" /></span> </p>
@@ -87,7 +92,7 @@ function Dashboard() {
           <header>
             <img src={frFlag} alt="" />
             <div>
-              <h3>English C2</h3>
+              <h3>{userInfo.langLearning} </h3>
               <p>Intermediate</p>
             </div>
           </header>

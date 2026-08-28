@@ -235,19 +235,3 @@
     gap:10px;
 
 }
-
-
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-
-    .btnBelowDesc {
-        font-size: 14px;
-        color: var(--white-7);
-        margin-top: 14px;
-        font-weight: 200;
-    }
-}

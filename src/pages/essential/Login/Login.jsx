@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import useLogin from '@/services/hooks/useLogin';
+import useLogin from '@/services/hooks/auth/useLogin';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
+  const navigate = useNavigate();
 
   const credentials = {
     email: email,
@@ -18,13 +20,19 @@ function Login() {
   const tryLogin = async () => {
 
     try {
-      const token = await loginUser(credentials);
+      const res = await loginUser(credentials);
+
+      const token = res.data;
+      const status = res.status;
 
       localStorage.setItem('token', token)
 
       const payload = JSON.parse(atob(token.split('.')[1]));
       const userId = payload.sub;
-      console.log(userId);
+
+      if (status == 200) {
+        navigate("/dashboard");
+      }
 
 
     } catch (err) {

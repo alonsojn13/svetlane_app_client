@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_CORE_URL } from '../api/apiCoreUrl';
+import { API_CORE_URL } from '@/services/api/apiCoreUrl';
 import { useEffect, useState } from 'react';
 
 export default function useUserInfo(){

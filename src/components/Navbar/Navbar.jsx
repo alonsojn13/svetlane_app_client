@@ -14,11 +14,14 @@ import frFlag from '../../assets/icons/frFlag.svg'
 import spFlag from '../../assets/icons/spFlag.svg'
 import ukFlag from '../../assets/icons/ukFlag.svg'
 import HamburgerMenu from './HamburgerMenu'
+import useUserInfo from '@/services/hooks/user/useUserInfo'
 
 
 
 function Navbar() {
 
+  const res = useUserInfo();
+  
     return (
         <header className={styles.headerContainer} >
 
@@ -26,19 +29,19 @@ function Navbar() {
 
                 <section className={styles.pictureProfile}>
                     <Link to="/user-profile">
-                        <img src={profileOne} alt="" />
+                        <img src={res.profile_picture} alt="" />
                     </Link>
                 </section>
 
                 <section className={styles.userInfo}>
-                    <h4>Alonso Nuñez</h4>
+                    <h4>{res.name} {res.lastname} </h4>
                     <span>Software Developer</span>
                 </section>
 
                 <div>
 
                     <section className={styles.languageOptions}>
-                        <span>A1</span>
+                        <span>{res.level} </span>
                         <img src={spFlag} alt="" />
                     </section>
 

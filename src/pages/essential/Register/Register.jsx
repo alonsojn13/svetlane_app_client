@@ -6,9 +6,9 @@ import world from '@/assets/icons/world.svg'
 import person from '@/assets/icons/person.svg'
 import key from '@/assets/icons/key.svg'
 import useAvailableLanguages from '@/services/hooks/availableLanguges';
-import useRegister from '@/services/hooks/useRegister';
+import useRegister from '@/services/hooks/auth/useRegister';
 import { useNavigate } from 'react-router-dom';
-import useLogin from '@/services/hooks/useLogin';
+import useLogin from '@/services/hooks/auth/useLogin';
 
 function Register() {
 
@@ -63,13 +63,13 @@ function Register() {
     async function registerUser() {
 
         const formData = new FormData();
-        formData.append("name", name)
-        formData.append("lastname", lastname)
-        formData.append("email", email)
-        formData.append("password", password)
-        formData.append("motherTongue", motherTongue)
-        formData.append("langLearning", langLearning)
-        formData.append("profilePicture", profilePicture)
+        formData.append("name", name);
+        formData.append("lastname", lastname);
+        formData.append("email", email);
+        formData.append("password", password);
+        formData.append("motherTongue", motherTongue);
+        formData.append("langLearning", langLearning);
+        formData.append("profilePicture", profilePicture);
 
         console.log(langLearning)
         const ok = await register(formData);

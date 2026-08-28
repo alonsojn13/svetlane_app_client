@@ -13,6 +13,9 @@ import ukFlag from '../../assets/icons/ukFlag.svg'
 import home from '../../assets/icons/homeWhite.svg'
 
 function HamburgerMenu() {
+
+
+
   return (
     <>
       <details>
@@ -23,7 +26,16 @@ function HamburgerMenu() {
         <ul className={styles.list}>
           <li> <Link to="/training">Continue</Link></li>
           <li> <Link to="/free-review">Review</Link></li>
-          <li> <Link to="/social-chat">Social</Link></li>
+
+          <details>
+            <summary><img src={arrowDown} alt="" /> Social</summary>
+            <div>
+              <li> <Link to="/contacts">Contacts</Link></li>
+              <li> <Link to="/posts">Posts</Link></li>
+              <li> <Link to="/mailbox">Mailbox</Link></li>
+            </div>
+
+          </details>
           <br />
           <details>
             <summary><img src={arrowDown} alt="" /> Progress</summary>

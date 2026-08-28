@@ -11,7 +11,7 @@ import Register from "@/pages/essential/Register/Register";
 import MainLayout from './components/MainLayout/MainLayout';
 import NoNavbarLayout from './components/MainLayout/NoNavbarLayout';
 
-import SocialChat from "./features/socialChat/SocialChat";
+import SocialChat from "./features/SocialChat/SocialChat";
 import RealLifeSituations from './pages/RealLifeSituations/RealLifeSituations';
 import GrammarLearned from './pages/GrammarLearned/GrammarLearned';
 import TrainingCards from './features/learningCards/TrainingCards';
@@ -21,6 +21,9 @@ import Login from '@/pages/essential/Login/Login';
 import UserProfile from './pages/UserProfile/UserProfile';
 import AvailableLanguages from './pages/AvailableLanguages/AvailableLanguages';
 import ActiveWords from '@/pages/ActiveWords/ActiveWords';
+import SocialPosts from './features/SocialPosts/SocialPosts';
+import SocialContacts from './features/SocialContacts/SocialContacts';
+import SocialMailbox from './features/SocialMailbox/SocialMailbox';
 
 
 function App() {
@@ -36,10 +39,16 @@ function App() {
             <Route path="/" element={<Register />} /> {/* public */}
 
             <Route path="/user-profile" element={<UserProfile />} /> {/* private */}
-            <Route path="/social" element={<SocialChat />} /> {/* private */}
             <Route path="/register" element={<Register />} /> {/* public */}
             <Route path="/login" element={<Login />} /> {/* public */}
             <Route path="/training" element={<TrainingCards />} />
+
+            <Route path="/contacts" element={<SocialContacts />} />
+            <Route path="/posts" element={<SocialPosts />} />
+            <Route path="/mailbox" element={<SocialMailbox />} />
+            <Route path="/chat" element={<SocialChat />} />
+
+
 
           </Route>
 
