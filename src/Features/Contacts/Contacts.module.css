@@ -1,0 +1,71 @@
+.contactsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    margin-top: 1em;
+}
+
+
+
+.contactCardInfo {
+    position: relative;
+    padding: 1em;
+    border-bottom: 1px solid var(--white-2);
+
+    .userProfileInfo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5em;
+    }
+
+    .userProfileInfo h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        font-size: 1.3em;
+    }
+
+    .userProfileInfo span {
+        color: var(--white-5);
+        font-size: var(--text-md);
+    }
+
+    .userMotherTongueFlag {
+        width: 1.4em;
+        height: .9em;
+        opacity: 0.8;
+        border: 1px solid var(--white-3);
+    }
+
+    .greenDot {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    h5 {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        font-weight: 200;
+    }
+
+    .userLanguageLearningFlag {
+        width: 1.4em;
+        height: 1em;
+        opacity: 0.8;
+        border: 1px solid var(--white-3);
+    }
+
+
+    footer {
+        display: flex;
+        gap: 2px;
+        color: var(--white-6);
+    }
+
+    footer p {
+        overflow-x: hidden;
+        white-space: nowrap;
+    }
+}
+

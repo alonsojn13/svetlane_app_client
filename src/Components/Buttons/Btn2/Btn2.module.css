@@ -1,0 +1,42 @@
+.btn {
+    display: flex;
+    background: none;
+    color: var(--white-8);
+    border: 1px solid var(--white-3);
+    font-size: var(--text-lg);
+    border-radius: 4px;
+    background-color: var(--black-5);
+    overflow:hidden;
+    width: 90%;
+    margin:0 auto;
+
+
+    p {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width:100%;
+        font-weight: 300;
+        padding:18px 40px;
+
+
+        span:nth-of-type(1){
+            display:flex;
+            align-items: center;
+            gap:10px;
+        }
+
+         img{
+            width:26px;
+            height:20px;
+            border:1px solid var(--white-3);
+        }
+
+        span:nth-of-type(2) {
+            margin-top: 2px;
+            font-size: var(--text-sm);
+            color:var(--white-4);
+        }
+
+    }
+}
